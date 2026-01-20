@@ -1,5 +1,13 @@
-## Hi there 👋
+# 👋 Hi, I’m Archismita Ghosh
 
+**Software Engineer | Backend & Full-Stack Developer | AI/ML Enthusiast**
+
+📍 Raleigh–Durham–Chapel Hill, NC  
+🎓 M.S. in Computer Science — North Carolina State University  
+💼 Former Software Engineer @ LTIMindtree  
+
+🔗 [LinkedIn](https://linkedin.com/in/archismitaghosh)  
+🔗 [GitHub](https://github.com/archig97)
 <!--
 **archig97/archig97** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
