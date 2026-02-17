@@ -93,6 +93,34 @@ Currently pursuing my Master’s in Computer Science at NC State, where I work o
 
 ---
 
+### 🔹 BlackVault — Real-Time Graph-Based Fraud Detection System  
+**Tech:** Python, FastAPI, Valkey (Key-Value Store), WebSockets, Docker  
+
+- Built a real-time fraud detection system that analyzes financial transactions and flags suspicious accounts instantly. Instead of evaluating accounts individually, the system models the ecosystem as a **graph** — where accounts are nodes and transactions are connections (edges).
+
+- Implemented **graph traversal using BFS (Breadth-First Search)** to measure how close an account is to known risky accounts and to propagate risk through connected networks. This helps detect coordinated fraud rings rather than isolated anomalies.
+
+- Used **Valkey**, a high-performance **key–value datastore**, as the core database to manage all system state with very low latency. Different data structures were used for different purposes:
+  - **Streams** → store incoming transactions in real time
+  - **Hashes** → store account profiles and risk scores
+  - **Sets** → represent graph relationships between accounts
+  - **Sorted Sets** → maintain a live ranking of high-risk accounts
+  - **Counters with expiration (TTL)** → track short-term behavioral patterns like transaction velocity and volume
+
+- Designed the backend using **FastAPI** to support real-time ingestion, risk computation, and API responses for dashboards. State updates were kept deterministic using atomic operations in the datastore to avoid race conditions during concurrent transactions.
+
+- Built a **transaction simulator** to generate realistic patterns such as rapid transfers, circular transactions, and suspicious bursts of activity, allowing the system to be tested under load.
+
+- Exposed REST APIs and live data endpoints so a dashboard could visualize:
+  - Risk scores
+  - Suspicious accounts
+  - Transaction activity
+  - Behavioral metrics
+
+- Containerized components with **Docker** to simplify setup and ensure consistent execution across environments.
+
+This project demonstrates how core computer science concepts like **graphs, BFS traversal, and key–value storage** can be applied to solve real-world problems in fintech systems and fraud detection.
+
 ## 📌 Interests
 - Backend & distributed systems  
 - AI-powered developer tools  
